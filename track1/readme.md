@@ -1,6 +1,6 @@
 # AAAI2024 COMPETITION ON MATH PROBLEM SOLVING - TRACK1
 
-This reposity is the solution of AAAI2024 COMPETITION ON MATH PROBLEM SOLVING for track1 by Team *CPDP-ICST* using GPT-4 API.
+This reposity is the solution of AAAI2024 COMPETITION ON MATH PROBLEM SOLVING for track1 by Team **CPDP-ICST** using GPT-4 API.
 
 ## Overview
 
@@ -30,7 +30,14 @@ track1/
 
 ### Method Pipeline
 
+![Solution Pipeline](arch.png "An Overview of our solution")
+We adopt model ensembling of two API-calling strategies to obtain the final results, namely the Openai official assistant API and the [code interpreter](https://github.com/shroominic/codeinterpreter-api), both of which call the gpt4-1106-preview API. Specifically, we followed these steps:
 
+1. Use both the math assistant API and the code interpreter to solve the problem data separately.
+2. Integrate the results. In our experiments, we found that the results from the math assistant API usually outperform those from the code interpreter, so in the integration, we prioritize the results from the math assistant API; if its results are invalid, we then turn to the results from the code interpreter.
+3. Verify and post-process the results. This includes format validation, merging independent results, voting on repeated questions, and conversion of floating-point numbers, among others. If a result from one branch is found to be incorrect at this stage, we will use the result from the other branch.
+
+<br/>
 
 ## Usage
 
