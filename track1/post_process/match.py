@@ -18,7 +18,7 @@ def find_answer(line):
     return matches[0]  # Returns the first match
 
 # To fill up
-absolute_path = ''
+absolute_path = './'
 
 # Path to the results directory
 result_path = absolute_path + 'results/API/'

@@ -1,0 +1,7 @@
+# Calculate the sum of the squares from 5 to 15
+sum_of_squares = sum(i**2 for i in range(5, 16))
+sum_of_squares
+1210
+Solve the problem and put your answer in\boxed{}. The problem is:$$5^{2}+6^{2}+7^{2}+\cdots +15^{2}$$. 
+The sum of the squares from \(5^2\) to \(15^2\) is \(\boxed{1210}\).
+{"queId": "559135fce0cc43d09bcdb784b6b68b16", "difficulty": "1", "response": "1210"}

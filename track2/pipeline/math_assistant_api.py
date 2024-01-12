@@ -26,13 +26,13 @@ from openai import OpenAI
 #     model="gpt-4-1106-preview"
 # )
 
-OPENAI_API_KEY = "sk-xx"
+OPENAI_API_KEY = "sk-XXX"
 client = OpenAI(api_key=OPENAI_API_KEY, timeout=180)
-assistant_id = 'xx'
+assistant_id = 'XXX'
 
 
 # Prompt
-base_prompt = "Please solve the problem step by step and verify your answer using code, and put your final answer in\\boxed{}. The problem is:"
+base_prompt = "Solve the problem and put your answer in\\boxed{}. The problem is:"
 
 
 

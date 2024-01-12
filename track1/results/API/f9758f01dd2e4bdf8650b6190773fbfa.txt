@@ -1,0 +1,26 @@
+# Calculate the minimum value of n using the pigeonhole principle
+possible_sums = 24  # From 1 to 24
+numbers_per_sum = 2  # We want to find when we have at least 3 numbers, so we take 2 per sum and add 1
+
+# Compute minimum n
+n_min = possible_sums * numbers_per_sum + 1
+n_min
+49
+Solve the problem and put your answer in\boxed{}. The problem is:从三位数$$100$$，$$101$$，$$102$$，\ldots，$$699$$，$$700$$中任意取出$$n$$个不同的数，使得总能找到其中三个数，它们的数字和相同，求$$n$$的最小值． 
+To solve this problem, we will use the Pigeonhole Principle. The Pigeonhole Principle states that if you have \( n \) items and \( k \) containers and \( n > k \), then at least one container must contain more than one item.
+
+In this case, the "containers" will be the possible sums of the digits of the numbers between 100 and 700. Since each number is a three-digit number where the hundreds digit can be from 1 to 6 (because the numbers range from 100 to 700) and the tens and units digits can be from 0 to 9, the smallest sum of digits for these numbers is \( 1 + 0 + 0 = 1 \) and the largest sum is \( 6 + 9 + 9 = 24 \).
+
+So, we have 24 "containers" for the sums of digits: 1, 2, 3, ..., 24.
+
+The Pigeonhole Principle now tells us that if we want to guarantee that there are at least three numbers with the same sum of digits, we must consider how many numbers can have distinct digit sums before we must repeat a sum.
+
+Let's calculate the minimum number \( n \) of different three-digit numbers we need to take from the given set so that there are at least three numbers with a matching sum of their digits. To do this, we will assume the worst-case scenario where each sum is distinct. Since we can have 24 distinct digit sums, and we want to find the minimum \( n \) such that there are at least three numbers with the same digit sum, we would have to have 24 groups of 2 numbers + 1 to ensure that at least one group has a third number, hence:
+
+\( n = 24 \times 2 + 1 \)
+
+Let's calculate this value.
+The minimum value of \( n \) such that there are at least three numbers with a matching sum of their digits from the set of three-digit numbers is \( n = 49 \). Therefore, the answer is:
+
+\[ n = \boxed{49} \]
+{"queId": "f9758f01dd2e4bdf8650b6190773fbfa", "difficulty": "2", "response": "49"}

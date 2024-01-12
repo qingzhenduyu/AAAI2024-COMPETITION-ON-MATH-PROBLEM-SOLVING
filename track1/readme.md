@@ -48,23 +48,32 @@ assistant = client.beta.assistants.create(
 <br/>
 
 ## Running: chatGPT assistant API(Recommend)
+```bash
+# 1. Complete the assistant_id and OPENAI_API_KEY in the math_assistant_api.py, check if the global path is correct, then run python pipeline/math_assistant_api.py to start. It may take a few days to completely obtain all the answers
+python pipeline/math_assistant_api.py
+# 2. Run post_process/match.py and compile the answers into result.txt
+python post_process/match.py
+# 3. Run post_process/generate.py to create a submission file that meets the specifications.
+python post_process/generate.py
+# 4. Optional: Run post_process/repeat.py to vote on the answers for repeated questions and select the most frequent one as the final answer.
+python post_process/repeat.py
+# 5. Post-processing: Cleanse some answers that do not conform to the float format to ensure they meet the submission standards, for example, converting "2 days" to "2".
+```
 
-1. Complete the assistant_id and OPENAI_API_KEY in the api.py, check if the global path is correct, then run python api.py to start.
-2. Run match.py and compile the answers into result.txt
-3. Run generate.py to create a submission file that meets the specifications.
-4. Optional: Run repeat.py to vote on the answers for repeated questions and select the most frequent one as the final answer.
-5. Post-processing: Cleanse some answers that do not conform to the float format to ensure they meet the submission standards, for example, converting "2 days" to "2".
-   
 <br/>
 
 ## Running: Code Interpreter
-
-1. Complete the "settings.OPENAI_API_KEY" in the api.py, then run python process.py to start.
-2. Run match.py and compile the answers into result.txt
-3. Run generate.py to create a submission file that meets the specifications.
-4. Optional: Run repeat.py to vote on the answers for repeated questions and select the most frequent one as the final answer.
-5. Post-processing: Cleanse some answers that do not conform to the float format to ensure they meet the submission standards, for example, converting "2 days" to "2".
-   
+```bash
+# 1. Complete the "settings.OPENAI_API_KEY" in the api.py, then run python pipeline/code_interpreter.py to start.
+python pipeline/code_interpreter.py
+# 2. Run post_process/match.py and compile the answers into result.txt
+python post_process/match.py
+# 3. Change variable "result_path" to 'results/code_interpreter/' in post_process/generate.py and run it to create a submission file that meets the specifications.
+python post_process/generate.py
+# 4. Optional: Run post_process/repeat.py to vote on the answers for repeated questions and select the most frequent one as the final answer.
+python post_process/repeat.py
+# 5. Other Post-processing: Cleanse some answers that do not conform to the float format to ensure they meet the submission standards, for example, converting "2 days" to "2".
+```
 <br/>
 
 ## Cost

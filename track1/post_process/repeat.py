@@ -39,16 +39,16 @@ def most_frequent_element(lst):
 if __name__ == '__main__':
     
     result_dict = {}
-    with open('TAL_SAQ6K_EN_prediction.json', "r", encoding='utf-8') as f:
+    with open('./submission/TAL_SAQ6K_CN_prediction.json', "r", encoding='utf-8') as f:
         result_dict = json.load(f)
 
-    EN_dict = {}
-    file_jsonl_path = './dataset/TAL-SAQ6K-EN.jsonl'
+    CN_dict = {}
+    file_jsonl_path = './dataset/TAL-SAQ7K-CN.jsonl'
     with open(file_jsonl_path, "r", encoding='utf-8') as f:
         for line in jsonlines.Reader(f):
-            EN_dict[line['queId']] = line['problem']
+            CN_dict[line['queId']] = line['problem']
 
-    duplicated_dict = find_duplicate_values_in_dict(EN_dict)
+    duplicated_dict = find_duplicate_values_in_dict(CN_dict)
 
     for key, values in duplicated_dict.items():
         duplicate_len = len(values)
@@ -62,7 +62,7 @@ if __name__ == '__main__':
                 for item in values:
                     result_dict[item] = most_frequent
 
-    with open('TAL_SAQ6K_EN_prediction.json', "w", encoding='utf-8') as wf:
+    with open('./submission/TAL_SAQ7K_CN_prediction.json', "w", encoding='utf-8') as wf:
         json_record = json.dumps(result_dict, ensure_ascii=False)
         wf.write(json_record + '\n')
 

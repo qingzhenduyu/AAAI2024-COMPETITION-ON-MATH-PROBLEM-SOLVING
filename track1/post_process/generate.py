@@ -51,7 +51,7 @@ with open('result.txt', "r") as f:
 
 mid_dict = {}
 # Writing the processed data to a JSON file
-with open('TAL_SAQ7K_CN_prediction.json', "w", encoding='utf-8') as wf:
+with open('./submission/TAL_SAQ7K_CN_prediction.json', "w", encoding='utf-8') as wf:
     for line in CN_lines:
         ID = line['queId']
         if ID in result_dict:

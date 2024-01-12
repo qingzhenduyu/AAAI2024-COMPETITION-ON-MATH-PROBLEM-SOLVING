@@ -26,9 +26,9 @@ from openai import OpenAI
 #     model="gpt-4-1106-preview"
 # )
 
-OPENAI_API_KEY = "sk-xx"
+OPENAI_API_KEY = "sk-XXX"
 client = OpenAI(api_key=OPENAI_API_KEY, timeout=180)
-assistant_id = 'xx'
+assistant_id = 'XXX'
 
 
 # Prompt
