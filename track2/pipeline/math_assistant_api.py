@@ -32,7 +32,7 @@ assistant_id = 'XXX'
 
 
 # Prompt
-base_prompt = "Solve the problem and put your answer in\\boxed{}. The problem is:"
+base_prompt = "Please solve the problem step by step and verify your answer using code, and put your final answer in\\boxed{}. The problem is:"
 
 
 

@@ -24,7 +24,7 @@ conda create -y -n interpreter python=3.9
 conda activate interpreter
 pip install -r code_requirements.txt
 ```
-You can also refer to Code Interpreter to install the necessary dependencies.
+You can also refer to [Code Interpreter](https://github.com/shroominic/codeinterpreter-api) to install the necessary dependencies.
 
 <br/>
 
