@@ -1,14 +1,16 @@
 # AAAI2024 COMPETITION ON MATH PROBLEM SOLVING - TRACK1
 
-This reposity is the solution of AAAI2024 COMPETITION ON MATH PROBLEM SOLVING for track1 by Team \textbf{CPDP-ICST} using GPT-4 API.
+This reposity is the solution of AAAI2024 COMPETITION ON MATH PROBLEM SOLVING for track1 by Team *CPDP-ICST* using GPT-4 API.
 
 ## Overview
 
 ### File Organization
+
+```
 track1/
 │
 ├── dataset/
-    └── TAL-SAQ7K-CN.jsonl: The preprocessed dataset. 
+    └── TAL-SAQ7K-CN.jsonl: The preprocessed dataset.
 ├── pipeline/
     ├── code_interpreter.py: code interpreter api calling.
     └── math_assistant_api.py: math assistant api calling.
@@ -24,6 +26,7 @@ track1/
 ├── api_requirements.txt
 ├── code_requirements.txt
 └── readme.md
+```
 
 ### Method Pipeline
 
