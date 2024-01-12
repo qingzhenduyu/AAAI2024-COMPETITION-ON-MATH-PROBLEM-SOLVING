@@ -21,7 +21,7 @@ def find_answer(line):
 absolute_path = ''
 
 # Path to the results directory
-result_path = absolute_path + 'results/'
+result_path = absolute_path + 'results/API/'
 # List all directories in the results path
 result_files = os.listdir(result_path)
 result_dict = {}

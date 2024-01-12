@@ -20,8 +20,8 @@ def find_answer(line):
 # To fill up
 absolute_path = ''
 
-# Path to the results directory
-result_path = absolute_path + 'results/'
+# Path to the results directory, results/API/ or results/code_interpreter/
+result_path = absolute_path + 'results/API/'
 # List all directories in the results path
 result_files = os.listdir(result_path)
 result_dict = {}

@@ -123,6 +123,3 @@ venv.bak/
 # IDEs
 .idea
 .vscode
-
-# seed project
-results/

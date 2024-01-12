@@ -2,15 +2,29 @@
 
 by CPDP-ICST
 
+## Before Replication
+In this competition, we integrated the chatGPT assistant API with the results from the [code interpreter](https://github.com/shroominic/codeinterpreter-api). Given that the latter might encounter various bugs during execution and the former has relatively good performance, it is recommended to prioritize using the chatGPT assistant API for replication.
+
 <br/>
 
-## Install dependencies
+## Install dependencies for api(Recommend)
 
 ```
 conda create -y -n API python=3.9
 conda activate API
-pip install -r requirements.txt
+pip install -r api_requirements.txt
 ```
+
+<br/>
+
+## Install dependencies for Code Interpreter
+
+```
+conda create -y -n interpreter python=3.9
+conda activate interpreter
+pip install -r code_requirements.txt
+```
+You can also refer to Code Interpreter to install the necessary dependencies.
 
 <br/>
 
@@ -33,7 +47,7 @@ assistant = client.beta.assistants.create(
 
 <br/>
 
-## Running
+## Running: chatGPT assistant API(Recommend)
 
 1. Complete the assistant_id and OPENAI_API_KEY in the api.py, check if the global path is correct, then run python api.py to start.
 2. Run match.py and compile the answers into result.txt
@@ -41,11 +55,21 @@ assistant = client.beta.assistants.create(
 4. Optional: Run repeat.py to vote on the answers for repeated questions and select the most frequent one as the final answer.
 5. Post-processing: Cleanse some answers that do not conform to the float format to ensure they meet the submission standards, for example, converting "2 days" to "2".
    
-   <br/>
+<br/>
+
+## Running: Code Interpreter
+
+1. Complete the "settings.OPENAI_API_KEY" in the api.py, then run python process.py to start.
+2. Run match.py and compile the answers into result.txt
+3. Run generate.py to create a submission file that meets the specifications.
+4. Optional: Run repeat.py to vote on the answers for repeated questions and select the most frequent one as the final answer.
+5. Post-processing: Cleanse some answers that do not conform to the float format to ensure they meet the submission standards, for example, converting "2 days" to "2".
+   
+<br/>
 
 ## Cost
 
-It might cost $200-300 and take a few days to completely obtain all the answers for this competition's questions.
+It might cost $2-300 each method and take a few days to completely obtain all the answers for this competition's questions.
 
 ## Attention
 

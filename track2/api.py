@@ -141,7 +141,7 @@ def process_prompt(result_path: str, line: dict):
 def main():
 
     absolute_path = ''
-    result_pth = './results'
+    result_pth = './results/API'
     file_name = './dataset/TAL-SAQ6K-EN.jsonl'
 
     lines = []
