@@ -10,19 +10,19 @@ This reposity is the solution of AAAI2024 COMPETITION ON MATH PROBLEM SOLVING fo
 track1/
 │
 ├── dataset/
-    └── TAL-SAQ7K-CN.jsonl: The preprocessed dataset.
+    └── TAL-SAQ7K-CN.jsonl    -    The preprocessed dataset.
 ├── pipeline/
-    ├── code_interpreter.py: code interpreter api calling.
-    └── math_assistant_api.py: math assistant api calling.
+    ├── code_interpreter.py    -    code interpreter api calling.
+    └── math_assistant_api.py    -    math assistant api calling.
 ├── post_process/
-    ├── generate.py: generate final answer.
-    ├── match.py: merge individual result files.
-    └── repeat.py: vote answers for duplicated questions.
-├── results/: store the individual responses from math assistant API or code interpreter.
+    ├── generate.py    -    generate final answer.
+    ├── match.py    -     merge individual result files.
+    └── repeat.py    -    vote answers for duplicated questions.
+├── results/    -    store the individual responses from math assistant API or code interpreter.
     ├── API/
     └── code_interpreter/
 ├── submission/
-    └── TAL_SAQ7K_CN_prediction.zip: Our final submission.
+    └── TAL_SAQ7K_CN_prediction.zip    -    Our final submission.
 ├── api_requirements.txt
 ├── code_requirements.txt
 └── readme.md
